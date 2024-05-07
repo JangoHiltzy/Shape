@@ -1,0 +1,61 @@
+﻿/* CUSTOM CSS STYLING */
+:root {
+    --bs-secondary-color: #6a6a6a;
+}
+
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.description-container {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 23px;
+    border: 3px solid #ffffff;
+}
+
+    .description-container p {
+        font-size: 18px;
+    }
+
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 18px;
+    display: block;
+    z-index: 9999;
+}
+
+.footer {
+    position: fixed;
+    bottom: -55px;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+    .footer a:hover {
+        opacity: 0.5;
+    }
+
+    .footer a {
+        margin-right: 35px;
+    }
+
+    .footer img[src='/images/githubicon.png'] {
+        margin-right: 45px;
+    }

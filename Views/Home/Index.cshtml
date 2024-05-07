@@ -1,0 +1,129 @@
+﻿@model Shape.Models.FitnessModel
+
+<h4 class="text-center">Enter Your Info</h4>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="fitnessForm" asp-controller="Fitness" asp-action="CalculateFitness" method="post" autocomplete="off">
+                <div class="form-group">
+                    <label for="unitSelection">Unit Selection:</label>
+                    <select class="form-control" id="unitSelection" name="UnitSelection">
+                        <option value="Metric" selected>Metric</option>
+                        <option value="Imperial">Imperial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select class="form-control" id="gender" name="Gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" class="form-control" id="age" name="Age" placeholder="Years">
+                </div>
+
+                <div id="metricFields">
+                    <div class="form-group">
+                        <label for="heightCm">Height:</label>
+                        <input type="number" class="form-control" id="heightCm" name="HeightCm" placeholder="Centimeters">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weightKg">Weight:</label>
+                        <input type="number" class="form-control" id="weightKg" name="WeightKg" placeholder="Kilograms">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="neckCm">Neck:</label>
+                        <input type="number" class="form-control" id="neckCm" name="NeckCm" placeholder="Centimeters">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="waistCm">Waist:</label>
+                        <input type="number" class="form-control" id="waistCm" name="WaistCm" placeholder="Centimeters">
+                    </div>
+
+                    <div id="hipFieldsFemaleMetric" style="display: none;">
+                        <div class="form-group">
+                            <label for="hipCm">Hips:</label>
+                            <input type="number" class="form-control" id="hipCm" name="HipCm" placeholder="Centimeters">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="imperialFields" style="display: none;">
+                    <div class="form-group">
+                        <label>Height:</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" name="HeightFt" placeholder="Feet">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" name="HeightIn" placeholder="Inches">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Weight:</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" name="WeightLb" placeholder="Pounds">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Neck:</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" name="NeckFt" placeholder="Feet">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" name="NeckIn" placeholder="Inches">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Waist:</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" name="WaistFt" placeholder="Feet">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" name="WaistIn" placeholder="Inches">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="hipFieldsFemaleImperial" style="display: none;">
+                        <label>Hips:</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" name="HipFt" placeholder="Feet">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" name="HipIn" placeholder="Inches">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group text-center mt-4">
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+            </form>
+            <div class="description-container">
+                <p>SHAPE is a BMI, body fat, and diet recommendation app designed to assist users in tracking their health and fitness goals.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/FormSwitching.js"></script>
+<script src="~/js/FormValidation.js"></script>
+<script src="~/js/Notifications.js"></script>

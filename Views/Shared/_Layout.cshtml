@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg" href="~/images/icon.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shape</title>
+    <link rel="stylesheet" href="~/css/bootswatch.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-auto text-white">
+                    SHAPE
+                    <img src="~/images/icon.png" alt="Icon" class="mr-2" style="height: 1em; width: 1em;" />
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-white fixed-bottom mb-5">
+        <div class="container text-center">
+            <p>© 2024 by Jani Hiltunen</p>
+            <a href="https://jhiltunenportfolio.netlify.app" target="_blank" title="My portfolio page" style="margin-left: 15px; text-decoration: none;">
+                <img src="~/images/portfolioicon.png" alt="Portfolio" class="social-icon">
+            </a>
+            <a href="https://github.com/JangoHiltzy" target="_blank" title="My GitHub profile" style="margin-right: 15px; text-decoration: none;">
+                <img src="~/images/githubicon.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/hiltzy/" target="_blank" title="My LinkedIn profile" style="margin-left: 15px; text-decoration: none;">
+                <img src="~/images/linkedinicon.png" alt="LinkedIn" class="social-icon">
+            </a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

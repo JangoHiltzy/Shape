@@ -1,0 +1,7 @@
+C:\Users\janih\Desktop\Netlify\Shape.exe
+C:\Users\janih\Desktop\Netlify\appsettings.Development.json
+C:\Users\janih\Desktop\Netlify\appsettings.json
+C:\Users\janih\Desktop\Netlify\Shape.dll
+C:\Users\janih\Desktop\Netlify\Shape.deps.json
+C:\Users\janih\Desktop\Netlify\Shape.runtimeconfig.json
+C:\Users\janih\Desktop\Netlify\Shape.pdb
